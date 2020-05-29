@@ -30,7 +30,7 @@ app.post("/register", (req, res, next) => {
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
-    .then((res) => {
+    .then((ress) => {
       axios
         .post("https://wtf-userdb.firebaseio.com/users.json", newUser)
         .then(() => {
@@ -38,10 +38,12 @@ app.post("/register", (req, res, next) => {
         })
         .catch((error) => {
           console.log(error);
+          res.redirect("/login");
         });
     })
     .catch((error) => {
       console.log(error);
+      res.redirect("/login");
     });
 
   console.log(newUser);
