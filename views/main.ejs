@@ -80,12 +80,14 @@
       <form action="/changepwd" method="POST">
         <input required type="email" name="email" placeholder="email" />
         <input
+          minlength="6"
           required
           type="password"
           name="opassword"
           placeholder="Old password"
         />
         <input
+          minlength="6"
           required
           type="password"
           name="npassword"
