@@ -70,17 +70,28 @@
     </div>
     <div class="main">
       <form action="register" method="POST">
-        <input type="text" name="name" placeholder="Enter your Name" />
-        <input type="text" name="college" placeholder="Enter College Name" />
+        <input required type="text" name="name" placeholder="Enter your Name" />
         <input
+          required
+          type="text"
+          name="college"
+          placeholder="Enter College Name"
+        />
+        <input
+          required
           type="number"
           min="1"
           max="5"
           name="year"
           placeholder="Enter Year"
         />
-        <input type="email" name="email" placeholder="Enter email" />
-        <input type="password" name="password" placeholder="Enter Password" />
+        <input required type="email" name="email" placeholder="Enter email" />
+        <input
+          required
+          type="password"
+          name="password"
+          placeholder="Enter Password"
+        />
         <button>SUBMIT</button>
       </form>
     </div>
